@@ -16,11 +16,12 @@
 
 <body>
   <header>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" href="#">
-          <img src="Logo.jpg" alt="Logo" class="img-fluid" style="max-width: 150px;">
+          <img src="Logo.jpg" alt="Logo" style="max-width: 120px;">
         </a>
 
         <!-- Toggler for mobile view -->
@@ -30,7 +31,7 @@
 
         <!-- Navigation links -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul class="d-flex ms-auto">
             <li class="nav-item">
               <a href="https://wa.me/(00554848) 3239-1900?text=Hola%2C%20estoy%20interesado%20en%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="btn btn-success d-flex align-items-center">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24" height="24" class="me-2" /> Contactanos
@@ -40,13 +41,14 @@
         </div>
       </div>
     </nav>
+
   </header>
 
   <main>
     <section class="buscador container py-5">
       <h2 class="text-center mb-4">Busca tu próximo hogar</h2>
-      <form id="buscador-form" class="row">
-        <div class="form-group col-12 col-md-4">
+      <form id="buscador-form">
+        <div class="form-group mb-3">
           <label for="tipo">Tipo de Propiedad:</label>
           <select id="tipo" name="tipo" class="form-control">
             <option value="casa">Casa</option>
@@ -55,13 +57,23 @@
           </select>
         </div>
 
-        <div class="form-group col-12 col-md-4">
+        <div class="form-group mb-3">
           <label for="ubicacion">Ubicación:</label>
           <input type="text" id="ubicacion" name="ubicacion" class="form-control" placeholder="Ciudad o barrio">
         </div>
 
-        <div class="col-12 col-md-4 d-flex align-items-end">
-          <button class="btn btn-secondary w-100" type="submit">Buscar</button>
+        <!-- <div class="form-group">
+          <label for="precio-min">Precio Mínimo:</label>
+          <input type="number" id="precio-min" name="precio-min" class="form-control" placeholder="Ej: 50000">
+        </div>
+
+        <div class="form-group">
+          <label for="precio-max">Precio Máximo:</label>
+          <input type="number" id="precio-max" name="precio-max" class="form-control" placeholder="Ej: 300000">
+        </div> -->
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-secondary w-100 w-md-auto" type="submit">Buscar</button>
         </div>
       </form>
     </section>
@@ -71,27 +83,29 @@
     </section>
   </main>
 
-  <footer class="bg-light py-4">
-    <div class="container text-center">
-      <div class="mb-3">
-        <img src="Logo.jpg" alt="logo" width="161" height="45">
-        <span class="d-block text-xs font-weight-bold">CRECI: 2471-J</span>
+  <footer>
+    <div class="container py-3">
+      <div class="row text-center">
+        <div>
+          <img alt="logo" loading="lazy" width="161" height="45" decoding="async" src="Logo.jpg">
+          <span class="text-xs font-bold text-brand">CRECI: 2471-J</span>
+        </div>
+        <div>
+          <a href="tel:(00554848) 3239-1900" target="_blank" class="btn btn-outline-primary mb-2">
+            <i class="fa-brands fa-whatsapp"></i> (00554848) 3239-1900
+          </a>
+          <a href="mailto:comercial@scimoveis.com.br" target="_blank" class="btn btn-outline-danger mb-2">
+            <i class="fa-regular fa-envelope-open"></i> comercial@scimoveis.com.br
+          </a>
+          <a href="https://www.facebook.com/imobiliariascimoveis" target="_blank" class="btn btn-outline-info mb-2">
+            <i class="fa-brands fa-facebook"></i> Facebook
+          </a>
+          <a href="https://www.instagram.com/imobiliariascimoveis/" target="_blank" class="btn btn-outline-info mb-2">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+        </div>
+        <p><i class="fa-solid fa-location-dot"></i> Rua das Gaivotas, 93, Florianópolis - SC - Brasil</p>
       </div>
-      <div class="d-flex justify-content-center mb-3">
-        <a href="tel:(00554848) 3239-1900" class="btn btn-outline-primary me-3">
-          <i class="fa-brands fa-whatsapp"></i> (00554848) 3239-1900
-        </a>
-        <a href="mailto:comercial@scimoveis.com.br" class="btn btn-outline-danger me-3">
-          <i class="fa-regular fa-envelope-open"></i> comercial@scimoveis.com.br
-        </a>
-        <a href="https://www.facebook.com/imobiliariascimoveis" target="_blank" class="btn btn-outline-info me-3">
-          <i class="fa-brands fa-facebook"></i> Facebook
-        </a>
-        <a href="https://www.instagram.com/imobiliariascimoveis/" target="_blank" class="btn btn-outline-info">
-          <i class="fa-brands fa-instagram"></i> Instagram
-        </a>
-      </div>
-      <p><i class="fa-solid fa-location-dot"></i> Rua das Gaivotas, 93, Florianópolis - SC - Brasil</p>
     </div>
   </footer>
 
