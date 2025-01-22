@@ -63,7 +63,7 @@ button:hover {
 
 /* Estilo global para el footer */
 footer {
-  background-color:grey; /* Fondo oscuro para el footer */
+  background-color:#808080cf; /* Fondo oscuro para el footer */
   color:  #1d406e;/* Texto blanco */
   padding: 40px 0;
 }
@@ -181,4 +181,6 @@ footer {
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
+.container {
+        max-width: 1000px !important;
+    }
