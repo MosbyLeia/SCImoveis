@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+header {
+  
+  color: white;
+  /* text-align: center; */
+  padding: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+.buscador {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.2rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color:  #1d406e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:  #1d406e;
+}
+
+#resultados {
+  margin-top: 2rem;
+}
+
+
+
+/* footer */
+
+/* Estilo global para el footer */
+footer {
+  background-color:grey; /* Fondo oscuro para el footer */
+  color:  #1d406e;/* Texto blanco */
+  padding: 40px 0;
+}
+
+/* Estilo para los contenedores de los elementos dentro del footer */
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Estilo para las secciones del footer */
+footer .w-full {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Estilo para los logos y los textos de contacto */
+footer .flex-col {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Estilo para los enlaces */
+footer a, nav a {
+  text-decoration: none;
+  color: #1d406e; /* Color gris claro para los enlaces */
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #8cd5f1; /* Color de énfasis cuando el enlace es hover */
+}
+
+footer a svg {
+  margin-right: 0.5rem;
+}
+
+/* Estilo para los títulos de las secciones */
+footer .text-base {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color:  #8cd5f1; /* Color llamativo para los títulos */
+  margin-bottom: 0.8rem;
+}
+
+/* Estilo para los párrafos de texto */
+footer .text-sm {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #1d406e;;
+}
+
+/* Estilo para los íconos sociales */
+footer .size-10 {
+  width: 30px;
+  height: 30px;
+}
+
+footer .size-10 svg {
+  fill: #1d406e;
+  transition: fill 0.3s ease;
+}
+
+footer .size-10:hover svg {
+  fill: #8cd5f1; /* Color de los íconos cuando el mouse pasa sobre ellos */
+}
+
+/* Estilo para las redes sociales en dispositivos móviles */
+footer .md\\:hidden {
+  display: block;
+}
+
+/* Estilo para las redes sociales en pantallas grandes */
+footer .md\\:flex {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .md\\:flex a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a2537; /* Fondo de las redes sociales */
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s ease;
+}
+
+footer .md\\:flex a:hover {
+  background-color: #8cd5f1; /* Color de fondo al hacer hover en los íconos */
+}
+
+/* Estilo para las listas de navegación */
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin: 10px 0;
+}
+
+/* Estilo para los íconos sociales en dispositivos móviles */
+footer .md\\:hidden .size-10 {
+  width: 40px;
+  height: 40px;
+}
+
+/* Añadir una sombra sutil */
+footer {
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
