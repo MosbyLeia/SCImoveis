@@ -111,43 +111,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </body>
 
-Para resolver los problemas que mencionas en la vista móvil, podemos trabajar en dos aspectos:
 
-Alinear el botón de WhatsApp correctamente dentro del navbar.
-Restaurar el estado del botón del navbar-toggler después de cerrar el menú.
-A continuación, te muestro las modificaciones necesarias:
-
-Alinear el botón de WhatsApp correctamente
-Para centrar o alinear correctamente el botón de WhatsApp en la vista móvil, asegúrate de que su contenedor (<ul> en este caso) esté configurado para centrarse o alinearse como desees. Modifica la clase del contenedor y el botón:
-
-html
-Copy
-Edit
-<ul class="navbar-nav ms-auto text-center">
-  <li class="nav-item">
-    <a href="https://wa.me/(00554848)3239-1900?text=Hola%2C%20estoy%20interesado%20en%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="btn btn-outline-success d-flex align-items-center justify-content-center">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24" height="24" class="me-2" /> Contactanos
-    </a>
-  </li>
-</ul>
-Además, añade estilos CSS para manejar el centrado:
-
-css
-Copy
-Edit
-.navbar-nav {
-  flex-direction: column; /* Organiza los elementos verticalmente */
-  margin-top: 1rem; /* Añade espacio entre el botón y otros elementos */
-}
-Restaurar el estado del botón del navbar-toggler
-El problema ocurre porque el menú no colapsa correctamente o la clase collapsed no se actualiza visualmente. Para arreglarlo, necesitas asegurarte de que el navbar-toggler funcione adecuadamente.
-
-Solución con JavaScript:
-Agrega un script que elimine y vuelva a agregar la clase collapsed al botón:
-
-html
-Copy
-Edit
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const toggler = document.querySelector('.navbar-toggler');
