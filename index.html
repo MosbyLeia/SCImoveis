@@ -128,3 +128,52 @@
   });
 </script>
 </html>
+
+
+import { useState } from "react";
+
+const App = () => {
+  const [departamentos, setDepartamentos] = useState([]);
+  const [buscando, setBuscando] = useState(false);
+
+  const buscarDepartamentos = () => {
+    setBuscando(true);
+    fetch("https://spreadsheets.google.com/feeds/list/2PACX-1vR-N5GU9cpKCP0AOuDwv7dLUyjnEeiC_XTwS8Nt_3mg0fe3RxLlcZhHpn5KaFYBtlCHFdGoTFn222py/1/public/values?alt=json")
+      .then(res => res.json())
+      .then(data => {
+        const items = data.feed.entry.map(entry => ({
+          id: entry.gsx$id.$t,
+          titulo: entry.gsx$título.$t,
+          precio: entry.gsx$precio.$t,
+          ubicacion: entry.gsx$ubicación.$t,
+          imagen: entry.gsx$imagen.$t
+        }));
+        setDepartamentos(items);
+        setBuscando(false);
+      })
+      .catch(() => setBuscando(false));
+  };
+
+  return (
+    <div>
+      <h1>Buscar Departamentos</h1>
+      <button onClick={buscarDepartamentos} disabled={buscando}>
+        {buscando ? "Buscando..." : "Buscar"}
+      </button>
+
+      <div>
+        {departamentos.map(dpto => (
+          <div key={dpto.id}>
+            <h2>{dpto.titulo}</h2>
+            <p>Ubicación: {dpto.ubicacion}</p>
+            <p>Precio: ${dpto.precio}</p>
+            <img src={dpto.imagen} alt={dpto.titulo} width="300" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
