@@ -17,20 +17,5 @@
 
 
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('#navbarNav');
-
-    // Detectar eventos de apertura y cierre del menú
-    navbarCollapse.addEventListener('show.bs.collapse', () => {
-      toggler.classList.remove('collapsed');
-    });
-
-    navbarCollapse.addEventListener('hide.bs.collapse', () => {
-      toggler.classList.add('collapsed');
-    });
-  });
-</script>
 </html>
 
